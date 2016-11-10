@@ -11,10 +11,11 @@ function login( callback ) {
     } else {
       console.log('User cancelled login or did not fully authorize.');
     }
-  },{scope: 'user_photos'} );
+  }, {scope: 'user_posts, user_photos'} );
 }
 
-function getAlbums( callback ) {
+
+function getAlbums(callback) {
   FB.api(
       '/me/albums',
       {fields: 'id,cover_photo'},
@@ -55,8 +56,10 @@ function getLikesForPhotoId( photoId, callback ) {
 function getPhotos(callback) {
   var allPhotos = [];
   var accessToken = '';
+
   login(function(loginResponse) {
       accessToken = loginResponse.authResponse.accessToken || '';
+
       getAlbums(function(albumResponse) {
           var i, album, deferreds = {}, listOfDeferreds = [];
           for (i = 0; i < albumResponse.data.length; i++) {
@@ -100,15 +103,34 @@ window.fbAsyncInit = function() {
     xfbml      : true
   });
   facebookReady.resolve();
+
+  FB.getLoginStatus(function(response){
+    if(response.status === 'connected'){
+      console.log("Logged in");
+      var posts = [];
+      FB.api('/me/feed',
+        function(postResponse){
+          postResponse.data.forEach(post => {
+            if (post.message) {
+              posts.push(post.message);
+            }
+          });
+          addWallText(posts);
+        }
+      )
+    }
+  })
 };
+
 $.when(docReady, facebookReady).then(function() {
   if (typeof getPhotos !== 'undefined') {
     getPhotos( function( photos ) {
-      console.log( photos );
         loadFiles(photos);
     });
+
   }
 });
+
 // call facebook script
 (function(d){
   var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}

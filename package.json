@@ -12,6 +12,7 @@
   "dependencies": {
     "a-frame": "^0.0.0",
     "aframe-asset-lazy-load": "^1.0.0",
+    "aframe-bmfont-text-component": "^0.1.4",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "morgan": "^1.7.0",

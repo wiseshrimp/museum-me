@@ -12,7 +12,7 @@ var t = 0;
 function render() {
     t += 0.01;
     requestAnimationFrame(render);
-    cylinder.setAttribute('position', '3 '+(Math.sin(t*2)+1)+' 0');
+    cylinder.setAttribute('position', '3 '+ (Math.sin(t * 2) + 1) + ' 0');
 }
 
 render();

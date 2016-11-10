@@ -23,3 +23,7 @@ var loadFiles = (photos) => {
     }
     else randomPhotos(50, photos);
 }
+
+var loadPosts = (posts) => {
+    console.log(posts);
+}
