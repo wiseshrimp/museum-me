@@ -105,7 +105,7 @@ $.when(docReady, facebookReady).then(function() {
   if (typeof getPhotos !== 'undefined') {
     getPhotos( function( photos ) {
       console.log( photos );
-                loadFiles(photos);
+        loadFiles(photos);
     });
   }
 });

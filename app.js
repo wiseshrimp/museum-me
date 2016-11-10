@@ -12,7 +12,7 @@ var port = 8080;
 
 var server = app.listen(port, function (err) {
     console.log('Listening on port ', port);
-    if (err) throw err; 
+    if (err) throw err;
 });
 
 app.engine('html', nunjucks.render);
@@ -25,11 +25,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(publicPath));
 app.use(express.static(mainPath));
-app.use(express.static(nodeModulesPath))
+app.use(express.static(nodeModulesPath));
 
+// Loading page
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/index.html'))
+    res.sendFile(path.join(__dirname, '/views/index.html'))
 });
 
 module.exports = app;
-

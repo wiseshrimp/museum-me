@@ -1,16 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>museum.me</title>
-    
-    <!--FILE THAT LOADS THE FACEBOOK PHOTOS-->
-    <script src="/script/main.js"></script>
-	<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-    <script src="/script/fb.js"></script>
-</head>
-<body>
-	<div id="fb-root"></div>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>museum.me</title>
+
+        <!--FILE THAT LOADS THE FACEBOOK PHOTOS-->
+        <script src="/script/main.js"></script>
+
+        <script src="/script/museum.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+        <script src="/script/fb.js"></script>
+        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>    
+
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="wood-floor-texture" src="../textures/wood-3.jpg">
+            </a-assets>
+
+            <a-camera position="0 1 4" cursor-visible="true" cursor-scale="2" cursor-color="#0095DD" cursor-opacity="0.5"></a-camera>
+            <a-plane
+                rotation="-90 0 0"
+                repeat="100 100"
+                src="#wood-floor-texture"
+                position="0 0 0"
+                width="1000"
+                height="1000"></a-plane>
+        </a-scene>
+
+        <!--TEST CYLINDER-->
+        <script src="/script/cylinder.js"></script>
+    </body>
 </html>
