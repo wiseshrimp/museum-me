@@ -8,7 +8,7 @@ var path = require('path');
 var publicPath = path.join(__dirname, '/public');
 var nodeModulesPath = path.join(__dirname, '/node_modules');
 var mainPath = path.join(__dirname, '/build');
-var port = 8080;
+var port = process.env.PORT || 8080;
 
 var server = app.listen(port, function (err) {
     console.log('Listening on port ', port);
