@@ -100,7 +100,6 @@ function loadFrames(i, position, height, width, side){
             entity.setAttribute("position", "-24.95 4 " + coordinates[2]);
             entity.setAttribute("rotation", "0 90 0");
             break;
-
     }
 
     scene.appendChild(entity);
