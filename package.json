@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -e html,css,js app.js --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "check-node-version --node '>= 6.7.0' && nodemon app.js"
   }, 
   "author": "",
   "license": "ISC",
@@ -21,6 +20,6 @@
     "three": "^0.82.1"
   }, 
   "engines": {
-    "node": "0.8.14"
+    "node": "6.7.0"
   }
 }
