@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "check-node-version --node '>= 6.7.0' && nodemon app.js"
+    "start": "nodemon app.js"
   }, 
   "author": "",
   "license": "ISC",
