@@ -8,7 +8,6 @@
         <!--FILE THAT LOADS THE FACEBOOK PHOTOS-->
         <script src="/script/main.js"></script>
 
-        <script src="/script/walls.js"></script>
         <script src="/script/frames.js"></script>
         <script src="/script/museum.js"></script>
         <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
@@ -19,7 +18,10 @@
     <body>
         <a-scene>
             <a-assets>
+                <img id="dark-wood-texture" src="../textures/bench-dark-wood.jpg">
+                <img id="white-metal-texture" src="../textures/white-metal.jpg">
                 <img id="wood-floor-texture" src="../textures/wood-3.jpg">
+                <img id="white-wall-texture" src="../textures/white_wall.png">
                 <a-asset-item id="statue-head" src="../models/statue_head.obj"></a-asset-item>
                 <a-asset-item id="wooden-bench" src="../models/wooden_bench.obj"></a-asset-item>
                 <a-asset-item id="ceiling-obj" src="../models/ceiling.obj"></a-asset-item>
@@ -35,14 +37,21 @@
                 height="1000"></a-plane>
             
             <!-- CEILING -->
-            <a-entity id="ceiling" scale="5 2 5" obj-model="obj: #ceiling-obj" rotation="180 0 0" position="0 20 30"></a-entity>
+            <a-entity id="ceiling" material="src: #white-metal-texture" repeat="5 5" scale="3 3 3" obj-model="obj: #ceiling-obj" rotation="180 0 0" position="0 15 15"></a-entity>
+
+            <!--<a-plane id="front-wall" material="src: #white-wall-texture" repeat="50 50" height="30" width="50" position="0 0 -5.55"></a-plane>-->
+            <a-plane id="left-wall" material="src: #white-wall-texture" repeat="5 5" height="30" width="50" rotation="0 90 0" position="-25 0 19.45"></a-plane>
+            <a-plane id="right-wall" material="src: #white-wall-texture" repeat="5 5" height="30" width="50" rotation="0 -90 0" position="25 0 19.45"></a-plane>
+            <a-plane id="back-wall" material="src: #white-wall-texture" repeat="5 5" height="30" width="50" rotation="180 0 0" position="0 0 44.45"></a-plane>
+            <a-plane id="front-wall" height="30" width="50" position="0 0 -5.55"></a-plane>
+
 
             <!-- STATUE HEAD -->
             <a-entity id="head" obj-model="obj: #statue-head" position="0 30 0"></a-entity>
 
             <!--BENCHES-->
-            <a-entity id="bench" scale="0.02 0.015 0.015" obj-model="obj: #wooden-bench" position="0 0 25"></a-entity>
-            <a-entity id="bench2" rotation="0 180 0" scale="0.02 0.015 0.015" obj-model="obj: #wooden-bench" position="0 0 21"></a-entity>
+            <a-entity id="bench" material="src: #dark-wood-texture" repeat="2 2 2" scale="0.02 0.015 0.015" obj-model="obj: #wooden-bench" position="0 0 25"></a-entity>
+            <a-entity id="bench2" rotation="0 180 0" material="src: #dark-wood-texture" repeat="2 2 2" scale="0.02 0.015 0.015" obj-model="obj: #wooden-bench" position="0 0 21"></a-entity>
 
             <!-- LIGHTS -->
             <!--<a-entity   light="type: point; intensity: 1; distance: 20; decay: 1.2"

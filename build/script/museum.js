@@ -39,7 +39,7 @@ function loadMuseum (){
         loadImage(backWallPhotos[i], i, "back");
     }
 
-    buildWalls();
+    // buildWalls();
 }
 
 /*
