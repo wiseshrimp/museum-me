@@ -1,7 +1,7 @@
 var scene = document.querySelector('a-scene');
 
 var cylinder = document.createElement("a-cylinder");
-
+cylinder.setAttribute("id", "cylinder")
 cylinder.setAttribute('color', '#FF9500');
 cylinder.setAttribute('height', '2');
 cylinder.setAttribute('radius', '0.75');
