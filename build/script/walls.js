@@ -5,8 +5,7 @@ function buildWalls(){
         frontWall.setAttribute("geometry", "height", 30);
         frontWall.setAttribute("geometry", "width", 50);
         frontWall.setAttribute("position", "0 0 -5.55");
-
-    scene.appendChild(frontWall);
+        // frontWall.setAttribute("material", "src", "url(../textures/white_wall.png)")
 
     // LEFT WALL:
     var leftWall = document.createElement("a-entity");
@@ -15,8 +14,8 @@ function buildWalls(){
         leftWall.setAttribute("geometry", "width", 50);
         leftWall.setAttribute("rotation", "0 90 0");
         leftWall.setAttribute("position", "-25 0 19.45")
-    
-    scene.appendChild(leftWall);
+        // leftWall.setAttribute("material", "src", "url(../textures/white_wall.png)")
+   
 
     // RIGHT WALL:
     var rightWall = document.createElement("a-entity");
@@ -25,8 +24,7 @@ function buildWalls(){
         rightWall.setAttribute("geometry", "width", 50);
         rightWall.setAttribute("rotation", "0 -90 0");
         rightWall.setAttribute("position", "25, 0, 19.45");
-    
-    scene.appendChild(rightWall);
+        // rightWall.setAttribute("material", "src", "url(../textures/white_wall.png)")
 
     // BACK WALL:
     var backWall = document.createElement("a-entity");
@@ -35,8 +33,15 @@ function buildWalls(){
         backWall.setAttribute("geometry", "width", 50);
         backWall.setAttribute("rotation", "180 0 0");
         backWall.setAttribute("position", "0 0 44.45");
-    
+        // backWall.setAttribute("material", "src", "url(../textures/white_wall.png)")
+
+    scene.appendChild(frontWall)
     scene.appendChild(backWall);
+    scene.appendChild(leftWall);
+    scene.appendChild(rightWall);
+
+    // CEILING:
+    
 
     // // CEILING:
     //     var ceiling = document.createElement("a-entity");

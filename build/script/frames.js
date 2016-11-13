@@ -9,24 +9,24 @@ function loadImage (imageUrl, i, side){
         
         if (side === "front"){
             var x = [-20, -10, 0, 10, 20];
-            var position = x[i] + " 4 -5.45";
+            var position = x[i] + " 5 -5.45";
         }
 
         else if (side === "left"){ // 19.45
             var z = [0.45, 10.45, 20.45, 30.45, 40.45];
-            position = "-24.9 4 " + z[i];
+            position = "-24.9 5 " + z[i];
             entity.setAttribute("rotation", "0 90 0");
         }
 
         else if (side === "right"){
             var z = [0.45, 10.45, 20.45, 30.45, 40.45];
-            position = "24.9 4 " + z[i];
+            position = "24.9 5 " + z[i];
             entity.setAttribute("rotation", "0 -90 0");
         }
 
         else if (side === "back"){
             var x = [-20, -10, 0, 10, 20];
-            position = x[i] + " 4 44.35";
+            position = x[i] + " 5 44.35";
         }
 
         entity.setAttribute("geometry", {primitive: "box"});
@@ -56,18 +56,18 @@ function loadFrames(i, position, height, width, side){
 
     switch (side){
         case "front":
-            entity.setAttribute("position", coordinates[0] + " 4 -5.5");
+            entity.setAttribute("position", coordinates[0] + " 5 -5.5");
             break;
         case "left":
-            entity.setAttribute("position", "-24.95 4 " + coordinates[2]);
+            entity.setAttribute("position", "-24.95 5 " + coordinates[2]);
             entity.setAttribute("rotation", "0 90 0");
             break;
         case "right":
-            entity.setAttribute("position", "24.95 4 " + coordinates[2]);
+            entity.setAttribute("position", "24.95 5 " + coordinates[2]);
             entity.setAttribute("rotation", "0 90 0");
             break;
         case "back":
-            entity.setAttribute("position", coordinates[0] + " 4 44.40");
+            entity.setAttribute("position", coordinates[0] + " 5 44.40");
     }
 
     scene.appendChild(entity);
