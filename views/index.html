@@ -21,6 +21,7 @@
         <a-scene>
             <a-camera gamepad-controls >
                 <a-cursor color="cyan"></a-cursor>
+                <a-entity tracked-controls="controller: 0; id: OpenVR Gamepad"></a-entity>
             </a-camera>
 
             <a-assets>
@@ -43,7 +44,8 @@
                 position="0 0 0"
                 width="1000"
                 height="1000"></a-plane>
-            
+            <a-entity tracked-controls="controller: 0; id: OpenVR Gamepad"></a-entity>
+
             <!-- CEILING -->
             <a-entity id="ceiling" material="src: #white-metal-texture" repeat="5 5" scale="3 3 3" obj-model="obj: #ceiling-obj" rotation="180 0 0" position="0 15 15"></a-entity>
 
