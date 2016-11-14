@@ -25,5 +25,5 @@ var loadFiles = (photos) => {
 }
 
 var loadPosts = (posts) => {
-    console.log(posts);
+    addWiseMonkey(posts);
 }

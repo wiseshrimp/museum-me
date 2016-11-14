@@ -39,5 +39,5 @@ function loadMuseum (){
     TO DO: DO SOMETHING WITH STATUSES
 */
 function addWallText(statuses) {
-    console.log('statuses: ', statuses);
+    addWiseMonkey(statuses);
 }

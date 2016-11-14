@@ -11,6 +11,7 @@
         <script src="/script/fb.js"></script>
         <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>    
         <script src="/aframe-gamepad-controls/dist/aframe-gamepad-controls.js"></script>
+        <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script> 
     </head>
     <body>
         <a-scene>
@@ -56,7 +57,7 @@
             <a-plane id="front-wall" height="30" width="50" position="0 0 -5.55"></a-plane>
 
             <a-box id="chimp-pedestal" position="25 0 5.6" depth="3" height="5" width="3.5" material="src: #white-marble-texture"></a-box>
-            <a-obj-model src="#chimp-obj" position="25 7 5.6" material="src: #pink-fur-texture" repeat="3 3" rotation="0 -90 0" scale="5 5 5"></a-obj-model>
+            <a-obj-model id="wise-chimp" src="#chimp-obj" position="25 7 5.6" material="src: #pink-fur-texture" repeat="3 3" rotation="0 -90 0" scale="5 5 5"></a-obj-model>
             <a-obj-model src="#statue-obj" rotation="0 90 0" material="src: #marble-texture" scale="2 2 2" position="-22.6 0 23.8"></a-obj-model> 
             <!-- STATUE HEAD -->
             <a-entity id="head" obj-model="obj: #statue-head" position="0 30 0"></a-entity>
@@ -87,6 +88,7 @@
         </a-scene>
 
         <!--TEST CYLINDER-->
+        <script src="/script/wiseMonkey.js"></script>
         <script src="/script/main.js"></script>
         <script src="/script/frames.js"></script>
         <script src="/script/game.js"></script>

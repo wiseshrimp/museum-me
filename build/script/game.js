@@ -8,13 +8,12 @@ function addInteractivity(url, position, side) {
     image.addEventListener("click", function () {
         t = 0;
         model = document.createElement("a-obj-model");
-        model.setAttribute("src", "#statue-head");;
-
+        model.setAttribute("src", "#statue-head");
+        
         model.addEventListener("click", function () {
             var pictureBox = document.createElement("a-box");
             pictureBox.setAttribute("material", "src", "url(" + url + ")");
             var modelPos = model.getAttribute("position");
-            // console.log(modelPos);
             var pictureBoxAnimation = document.createElement("a-animation");
             pictureBoxAnimation.setAttribute("attribute", "scale");
             pictureBoxAnimation.setAttribute("begin", "4000");
