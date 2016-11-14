@@ -31,6 +31,10 @@ aframe-bmfont-text-component:
     object-assign "^4.1.0"
     three-bmfont-text "^2.1.0"
 
+aframe-gamepad-controls:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/aframe-gamepad-controls/-/aframe-gamepad-controls-0.5.0.tgz#541b2db2b3297b27f8d6d3e9daacf2223951f5e8"
+
 an-array@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/an-array/-/an-array-1.0.0.tgz#c125a5bb8257778e35f4b4f6aa9c7d0fa9e42665"
