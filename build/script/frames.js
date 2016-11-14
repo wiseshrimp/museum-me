@@ -1,4 +1,6 @@
-function loadImage (imageUrl, i, side){
+var scene = document.querySelector('a-scene');
+
+function loadImage(imageUrl, i, side) {
     var img = new Image();
     img.src = imageUrl;
     var entity = document.createElement("a-entity");

@@ -6,7 +6,6 @@
 var distance, coordinates;
 
 function loadMuseum (){
-    animateBenches();
     var frontWallPhotos = photoBank.slice(0, 6);
     var leftWallPhotos = photoBank.slice(6, 12);
     var rightWallPhotos = photoBank.slice(12, 18);

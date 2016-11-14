@@ -7,11 +7,6 @@
 
         <!--FILE THAT LOADS THE FACEBOOK PHOTOS-->
         
-        <script src="/script/main.js"></script>
-        <script src="/script/musicalChairs.js"></script>
-        <script src="/script/frames.js"></script>
-        <script src="/script/game.js"></script>
-        <script src="/script/museum.js"></script>
         <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
         <script src="/script/fb.js"></script>
         <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>    
@@ -26,15 +21,20 @@
 
             <a-assets>
                 <img id="dark-wood-texture" src="../textures/bench-dark-wood.jpg" />
+                <img id="marble-texture" src="../textures/marble.jpg" />
                 <img id="dark-metal-texture" src="../textures/dark-metal.jpg" /> 
                 <img id="white-metal-texture" src="../textures/white-metal.jpg" />
                 <img id="wood-floor-texture" src="../textures/wood-3.jpg" />
                 <img id="white-wall-texture" src="../textures/white_wall.png" />
+                <img id="pink-fur-texture" src="../textures/pink-fur-2.jpg" />
+                <img id="white-marble-texture" src="../textures/white-marble.jpg" />
                 <a-asset-item id="statue-head" src="../models/statue_head.obj"></a-asset-item>
                 <a-asset-item id="boletus-obj" src="../models/boletus.obj"></a-asset-item>
                 <a-asset-item id="wooden-bench" src="../models/wooden_bench.obj"></a-asset-item>
                 <a-asset-item id="ceiling-obj" src="../models/ceiling.obj"></a-asset-item>
                 <a-asset-item id="trash-obj" src="../models/trash_can.obj"></a-asset-item>
+                <a-asset-item id="statue-obj" src="../models/statue.obj"></a-asset-item>
+                <a-asset-item id="chimp-obj" src="../models/chimp.obj"></a-asset-item>
             </a-assets>
 
             <a-plane
@@ -55,7 +55,9 @@
             <a-plane id="back-wall" material="src: #white-wall-texture" repeat="5 5" height="30" width="50" rotation="180 0 0" position="0 0 44.45"></a-plane>
             <a-plane id="front-wall" height="30" width="50" position="0 0 -5.55"></a-plane>
 
-
+            <a-box id="chimp-pedestal" position="25 0 5.6" depth="3" height="5" width="3.5" material="src: #white-marble-texture"></a-box>
+            <a-obj-model src="#chimp-obj" position="25 7 5.6" material="src: #pink-fur-texture" repeat="3 3" rotation="0 -90 0" scale="5 5 5"></a-obj-model>
+            <a-obj-model src="#statue-obj" rotation="0 90 0" material="src: #marble-texture" scale="2 2 2" position="-22.6 0 23.8"></a-obj-model> 
             <!-- STATUE HEAD -->
             <a-entity id="head" obj-model="obj: #statue-head" position="0 30 0"></a-entity>
 
@@ -85,6 +87,10 @@
         </a-scene>
 
         <!--TEST CYLINDER-->
-        <script src="/script/cylinder.js"></script>
+        <script src="/script/main.js"></script>
+        <script src="/script/frames.js"></script>
+        <script src="/script/game.js"></script>
+        <script src="/script/museum.js"></script>
+        <!--<script src="/script/cylinder.js"></script>-->
     </body>
 </html>
