@@ -7,9 +7,9 @@ var distance, coordinates;
 
 function loadMuseum (){
     var frontWallPhotos = photoBank.slice(0, 6);
-    var leftWallPhotos = photoBank.slice(6, 12);
-    var rightWallPhotos = photoBank.slice(12, 18);
-    var backWallPhotos = photoBank.slice(18, 26);
+    var leftWallPhotos = photoBank.slice(7, 13);
+    var rightWallPhotos = photoBank.slice(14, 20);
+    var backWallPhotos = photoBank.slice(21, 27);
 
     // loadCylinder(photoBank[27])
 
