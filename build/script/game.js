@@ -4,7 +4,7 @@ var models = ["../models/statue_head.obj", "../models/boletus.obj", "../models/c
 function addInteractivity(url, position, side) {
     var image = document.getElementById(url);
 
-    image.addEventListener("gamepadbuttondown", function () {
+    image.addEventListener("click", function () {
         t = 0;
         model = document.createElement("a-obj-model");
         model.setAttribute("src", "#statue-head");
@@ -12,7 +12,7 @@ function addInteractivity(url, position, side) {
         // var boxAnimation = document.createElement("a-animation");
         // boxAnimation.setAttribute("attribute", "position");
 
-        model.addEventListener("gamepadbuttondown", function () {
+        model.addEventListener("click", function () {
             var pictureBox = document.createElement("a-box");
             pictureBox.setAttribute("material", "src", "url(" + url + ")");
             var modelPos = model.getAttribute("position");
