@@ -7,8 +7,9 @@
 
         <!--FILE THAT LOADS THE FACEBOOK PHOTOS-->
         <script src="/script/main.js"></script>
-
+        <script src="/script/musicalChairs.js"></script>
         <script src="/script/frames.js"></script>
+        <script src="/script/game.js"></script>
         <script src="/script/museum.js"></script>
         <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
         <script src="/script/fb.js"></script>
@@ -17,24 +18,23 @@
     </head>
     <body>
         <a-scene>
+            <a-camera>
+                <a-cursor color="cyan"></a-cursor>
+            </a-camera>
+
             <a-assets>
-                <img id="dark-wood-texture" src="../textures/bench-dark-wood.jpg">
-                <img id="white-metal-texture" src="../textures/white-metal.jpg">
-                <img id="wood-floor-texture" src="../textures/wood-3.jpg">
-                <img id="white-wall-texture" src="../textures/white_wall.png">
+                <img id="dark-wood-texture" src="../textures/bench-dark-wood.jpg" />
+                <img id="dark-metal-texture" src="../textures/dark-metal.jpg" /> 
+                <img id="white-metal-texture" src="../textures/white-metal.jpg" />
+                <img id="wood-floor-texture" src="../textures/wood-3.jpg" />
+                <img id="white-wall-texture" src="../textures/white_wall.png" />
                 <a-asset-item id="statue-head" src="../models/statue_head.obj"></a-asset-item>
+                <a-asset-item id="boletus-obj" src="../models/boletus.obj"></a-asset-item>
                 <a-asset-item id="wooden-bench" src="../models/wooden_bench.obj"></a-asset-item>
                 <a-asset-item id="ceiling-obj" src="../models/ceiling.obj"></a-asset-item>
+                <a-asset-item id="trash-obj" src="../models/trash_can.obj"></a-asset-item>
             </a-assets>
-<a-entity camera
-    position="0 4 0"
-    look-controls wasd-controls>
-  <a-entity cursor="fuse: true; fuseTimeout: 500"
-            position="0 4 0"
-            geometry="primitive: ring"
-            material="color: white; shader: flat">
-  </a-entity>
-</a-entity>
+
             <a-plane
                 rotation="-90 0 0"
                 repeat="100 100"
@@ -60,6 +60,8 @@
             <a-entity id="bench" material="src: #dark-wood-texture" repeat="2 2 2" scale="0.02 0.015 0.015" obj-model="obj: #wooden-bench" position="0 0 25"></a-entity>
             <a-entity id="bench2" rotation="0 180 0" material="src: #dark-wood-texture" repeat="2 2 2" scale="0.02 0.015 0.015" obj-model="obj: #wooden-bench" position="0 0 21"></a-entity>
 
+            <a-obj-model src="#trash-obj" material="src: #dark-metal-texture" scale="0.02 0.02 0.02" position="4 0 23.1"></a-obj-model>
+
             <!-- LIGHTS -->
             <a-light intensity="0.5" light="intensity:0.5;type:point;distance:20;color:#DEE0E0" type="point" distance="20" position="0 10 -10"></a-light>
             <a-light intensity="0.5" light="intensity:0.5;type:point;distance:20;color:#DEE0E0" type="point" distance="20" position="0 10 5"></a-light>
@@ -76,7 +78,7 @@
             <a-light intensity="0.5" light="intensity:0.5;type:point;distance:20;color:#DEE0E0" type="point" distance="20" position="20 10 20"></a-light>
             <a-light intensity="0.5" light="intensity:0.5;type:point;distance:20;color:#DEE0E0" type="point" distance="20" position="20 10 35"></a-light>
 
-            <a-light type="ambient" light="intensity: 0.8s; type:ambient; distance:20; color:#DEE0E0" color="#DEE0E0"></a-light>
+            <a-light type="ambient" light="intensity: 0.8; type: ambient; distance:20; color:#DEE0E0" color="#DEE0E0"></a-light>
         </a-scene>
 
         <!--TEST CYLINDER-->

@@ -6,6 +6,7 @@ cylinder.setAttribute('color', '#FF9500');
 cylinder.setAttribute('height', '2');
 cylinder.setAttribute('radius', '0.75');
 cylinder.setAttribute('position', '3 1 0');
+if (photoBank.length) cylinder.setAttribute("src", "url(" + photoBank[51] + ")")
 scene.appendChild(cylinder);
 var t = 0;
 

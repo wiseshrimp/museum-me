@@ -38,10 +38,33 @@ function loadImage (imageUrl, i, side){
         entity.setAttribute("position", position);
         entity.setAttribute("geometry", "height", height);
         entity.setAttribute("geometry", "width", width);
+        entity.setAttribute("id", imageUrl);
 
         scene.appendChild(entity);
+        addInteractivity(imageUrl, position, side);
     }
 }
+// var t;
+// function loadCylinder(imageUrl) {
+//     var cylinder = document.createElement("a-cylinder");
+//     cylinder.setAttribute("id", "cylinder");
+//     cylinder.setAttribute('height', '2');
+//     cylinder.setAttribute('radius', '0.75');
+//     cylinder.setAttribute('position', '3 1 0');
+//     var img = new Image();
+//     img.src = imageUrl;
+//     img.onload = function () {
+//         cylinder.setAttribute("src", "url(" + img.src + ")");
+//         scene.appendChild(cylinder);
+//         t = 0;
+//         render();
+//         function render() {
+//             t += 0.01;
+//             requestAnimationFrame(render);
+//             cylinder.setAttribute('position', '3 '+ (Math.sin(t * 2) + 1) + ' 0');
+//         }
+//     }
+// }
 
 function loadFrames(i, position, height, width, side){
     coordinates = position.split(' ');

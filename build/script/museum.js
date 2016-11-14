@@ -1,6 +1,4 @@
 
-var scene = document.querySelector('a-scene');
-
 /*
     Loops through the photoBank array and calls loadImage and loadFrame
 */
@@ -8,16 +6,13 @@ var scene = document.querySelector('a-scene');
 var distance, coordinates;
 
 function loadMuseum (){
-
+    animateBenches();
     var frontWallPhotos = photoBank.slice(0, 6);
     var leftWallPhotos = photoBank.slice(6, 12);
     var rightWallPhotos = photoBank.slice(12, 18);
     var backWallPhotos = photoBank.slice(18, 26);
-    // var statueHead = document.querySelector("#head");
-    // statueHead.setAttribute("material", "src", "url("+ photoBank[27] + ")");
-    // console.log(statueHead);
-    // // statueHead.setAttribute("position", "5 5 0")
-    // scene.appendChild(statueHead);
+
+    // loadCylinder(photoBank[27])
 
     // Front wall
     for (var i = 0; i < frontWallPhotos.length; i++){
@@ -39,7 +34,6 @@ function loadMuseum (){
         loadImage(backWallPhotos[i], i, "back");
     }
 
-    // buildWalls();
 }
 
 /*
