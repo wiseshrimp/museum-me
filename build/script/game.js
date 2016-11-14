@@ -3,19 +3,31 @@ var model, coords, pos;
 var models = ["../models/statue_head.obj", "../models/boletus.obj", "../models/chimp.obj"]
 function addInteractivity(url, position, side) {
     var image = document.getElementById(url);
-    var material = document.createElement("img");
-    material.setAttribute("id", url + "-2");
-    material.setAttribute("src", url);
-    scene.appendChild(material);
 
     image.addEventListener("click", function () {
         t = 0;
         model = document.createElement("a-obj-model");
         model.setAttribute("src", "#statue-head");
 
+        // var boxAnimation = document.createElement("a-animation");
+        // boxAnimation.setAttribute("attribute", "position");
+
+        model.addEventListener("click", function () {
+            var pictureBox = document.createElement("a-box");
+            pictureBox.setAttribute("material", "src", "url(" + url + ")");
+            var modelPos = model.getAttribute("position");
+            console.log(modelPos);
+            // var modelCoor = modelPos.split(" ");
+            // boxAnimation.setAttribute("from", modelPos);
+            // boxAnimation.setAttribute("to", modelCoor[0] + " " + (Number(modelCoor[1]) + 2) + " " + modelCoor[2])
+            pictureBox.setAttribute("position", modelPos);
+            // pictureBox.appendChild(boxAnimation);
+            scene.appendChild(pictureBox);
+        })
+
         coords = image.getAttribute("position");
         pos = coords.x + " " + coords.y + " " + coords.z;
-        // model.setAttribute("material", {src: "url(" + url + ")"})
+        // model.setAttribute("material", "src: url(" + url + ")");
         switch (side) {
             case "left":
                 model.setAttribute("rotation", " 0 90 0");
