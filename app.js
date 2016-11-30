@@ -36,8 +36,8 @@ app.get('/welcome', (req, res) => {
     res.sendFile(path.join(__dirname, "/views", "welcome.html"))
 })
 
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views", "login.html"));
+app.get("/logout", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views", "logout.html"));
 })
 
 app.get("/privacy", (req, res) => {

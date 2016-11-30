@@ -2,6 +2,12 @@ function makeFacebookPhotoURL( id, accessToken ) {
   return 'https://graph.facebook.com/' + id + '/picture?access_token=' + accessToken;
 }
 
+function fbLogout() {
+        FB.logout(function (response) {
+            //Do what ever you want here when logged out like reloading the page
+            window.location = "/logout"
+        });
+  }
 function login( callback ) {
   FB.login(function(response) {
     if (response.authResponse) {

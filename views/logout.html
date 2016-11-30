@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>museum.me</title>
+
+        <link rel="stylesheet" href"/stylesheets/style.css" />
+        
+        <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>    
+        <script src="/aframe-gamepad-controls/dist/aframe-gamepad-controls.js"></script>
+        <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script> 
+    </head>
+    <body>
+    <a-scene>
+        <a-camera gamepad-controls look-controls wasd-controls>
+            <a-cursor color="cyan"></a-cursor>
+            <a-entity tracked-controls="controller: 0; id: OpenVR Gamepad"></a-entity>
+        </a-camera>
+
+        <a-entity class="one" text="text: successfully logged out" position="-12 7 -10"></a-entity>
+        <a-entity class="one" text="text: goodbye..." position="-12 5 -10"></a-entity>
+
+
+    </a-scene>
+
+    <script src="/script/welcome.js"></script>
+    </body>
+</html>
