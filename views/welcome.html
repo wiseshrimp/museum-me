@@ -39,6 +39,58 @@
 
     </a-scene>
 
-    <script src="../script/welcome.js"></script>
+    <script>
+    var scene = document.querySelector('a-scene');
+    var textElements = Array.from(document.getElementsByClassName("one"));
+
+    const addListener = () => {
+        document.addEventListener("keydown", (e) => {
+            if (e.which === 13) window.location.href = "/museum"
+        })
+    }
+
+    const addHead = () => {
+        var mushroom = document.getElementById('mushroom');
+        mushroom.addEventListener('click', () => {
+            var head = document.createElement('a-obj-model');
+            head.setAttribute('src', '#statue-head');
+            head.setAttribute('position', '8 0 -10');
+            console.log(Array.isArray(textElements))
+            textElements.forEach(text => {
+                scene.removeChild(text)
+            })
+            
+            scene.appendChild(head)
+
+            var text = document.createElement("a-entity");
+            text.setAttribute("text", "text: Awesome! Now you're definitely ready to start");
+            text.setAttribute("position", "-12 7 -10");
+            scene.appendChild(text);
+
+            text = document.createElement("a-entity");
+            text.setAttribute("text", "text: Click on your pictures and the statue heads for fun surprises");
+            text.setAttribute("position", "-12 5 -10");
+            scene.appendChild(text);
+
+            text = document.createElement("a-entity");
+            text.setAttribute("text", "text: Click on the cubes to make them disappear");
+            text.setAttribute("position", "-12 4 -10");
+            scene.appendChild(text);
+
+            text = document.createElement("a-entity");
+            text.setAttribute("text", "text: To logout, click the logout button on the bottom");
+            text.setAttribute("position", "-12 3 -10");
+            scene.appendChild(text);
+
+            text = document.createElement("a-entity");
+            text.setAttribute("text", "text: To begin, press enter on your keyboard!");
+            text.setAttribute("position", "-12 1 -10");
+            scene.appendChild(text);        
+        })
+    }
+
+    addListener()
+    addHead();
+    </script>
     </body>
 </html>
