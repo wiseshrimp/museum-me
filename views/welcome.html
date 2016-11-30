@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>museum.me</title>
+
+        <link rel="stylesheet" href"/stylesheets/style.css" />
+        
+        <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>    
+        <script src="/aframe-gamepad-controls/dist/aframe-gamepad-controls.js"></script>
+        <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script> 
+    </head>
+    <body>
+    <a-scene>
+        <a-assets>
+            <img id="pink-fur-texture" src="../textures/pink-fur-2.jpg" />
+            <a-asset-item id="boletus-obj" src="../models/boletus.obj"></a-asset-item>
+            <a-asset-item id="statue-head" src="../models/statue_head.obj"></a-asset-item>
+        </a-assets>
+        <a-camera gamepad-controls look-controls wasd-controls>
+            <a-cursor color="cyan"></a-cursor>
+            <a-entity tracked-controls="controller: 0; id: OpenVR Gamepad"></a-entity>
+        </a-camera>
+
+        <a-entity class="one" text="text: welcome to museum me, a museum for u..." position="-12 7 -10"></a-entity>
+
+        <a-entity class="one"  text="text: press enter on your keyboard to skip the instructions" position="-12 5 -10"></a-entity>
+
+        <a-entity class="one"  text="text: to navigate the space, use a controller or the w, a, s, d keys on a computer" position="-12 3 -10"></a-entity>
+        <a-entity class="one"  text="text: and click and drag to rotate" position="-12 2 -10"></a-entity>
+
+        <a-entity class="one"  text="text: you see that blue circle?" position="-12 0 -10"></a-entity>
+        <a-entity class="one"  text="text: get that circle inside of objects and 'click' to see cool things happen!" position="-12 -1 -10"></a-entity>
+        <a-entity class="one"  text="text: try clicking on this mushroom            with your blue cursor" position="-12 -2 -10"></a-entity>
+        <a-entity class="one"  id="mushroom" material="src: #pink-fur-texture" repeat="2 2 2" scale="0.02 0.015 0.015" obj-model="obj: #boletus-obj" position="-2 -2.2 -10" rotation="-90 0 0"></a-entity>
+        <a-entity class="one"  text="text: (a head should appear)" position="-11 -3 -10"></a-entity>
+
+    </a-scene>
+
+    <script src="/script/welcome.js"></script>
+    </body>
+</html>

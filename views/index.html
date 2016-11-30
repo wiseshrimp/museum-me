@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>museum.me</title>
 
-        <!--FILE THAT LOADS THE FACEBOOK PHOTOS-->
+        <link rel="stylesheet" href"/stylesheets/style.css" />
         
         <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
         <script src="/script/fb.js"></script>
@@ -14,6 +14,12 @@
         <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script> 
     </head>
     <body>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loder-section section-right"></div>
+        </div>
+
         <a-scene>
             <a-camera gamepad-controls look-controls wasd-controls>
                 <a-cursor color="cyan"></a-cursor>
