@@ -29,11 +29,11 @@ app.use(express.static(nodeModulesPath));
 
 // Loading page
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/index.html'))
+    res.sendFile(path.join(__dirname, "/views", "welcome.html"))
 });
 
-app.get('/welcome', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views", "welcome.html"))
+app.get('/museum', (req, res) => {
+    res.sendFile(path.join(__dirname, "/views", "index.html"))
 })
 
 app.get("/logout", (req, res) => {

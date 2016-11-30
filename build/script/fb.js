@@ -3,7 +3,8 @@ function makeFacebookPhotoURL( id, accessToken ) {
 }
 
 function fbLogout() {
-        FB.logout(function (response) {
+  FB.logout(function (response) {
+          console.log(response)
             //Do what ever you want here when logged out like reloading the page
             window.location = "/logout"
         });
