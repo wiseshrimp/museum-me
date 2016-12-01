@@ -2,13 +2,16 @@ function makeFacebookPhotoURL( id, accessToken ) {
   return 'https://graph.facebook.com/' + id + '/picture?access_token=' + accessToken;
 }
 
-function fbLogout() {
-  FB.logout(function (response) {
-          console.log(response)
-            //Do what ever you want here when logged out like reloading the page
-            window.location = "/logout"
-        });
-  }
+function fbLogin() {
+  (function(d){
+    var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+    js = d.createElement('script'); js.id = id; js.async = true;
+    js.src = "http://connect.facebook.net/en_US/all.js";
+    d.getElementsByTagName('head')[0].appendChild(js);
+  }(document));
+}
+
+
 function login( callback ) {
   FB.login(function(response) {
     if (response.authResponse) {
@@ -139,9 +142,12 @@ $.when(docReady, facebookReady).then(function() {
 });
 
 // call facebook script
-(function(d){
-  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-  js = d.createElement('script'); js.id = id; js.async = true;
-  js.src = "http://connect.facebook.net/en_US/all.js";
-  d.getElementsByTagName('head')[0].appendChild(js);
-}(document));
+
+
+function fbLogout() {
+  FB.logout(function (response) {
+          console.log(response)
+            //Do what ever you want here when logged out like reloading the page
+            window.location = "/logout"
+        });
+  }
